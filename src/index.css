@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink-950: #0b0a08;
+  --color-ink-900: #14120e;
+  --color-ink-800: #1d1a14;
+  --color-ink-700: #2a251c;
+
+  --color-gold-300: #e8c982;
+  --color-gold-400: #d9ab4f;
+  --color-gold-500: #c8963a;
+  --color-gold-600: #a97a2b;
+
+  --color-cream-50: #faf6ee;
+  --color-cream-100: #f3ecdd;
+  --color-cream-300: #d9cdb4;
+  --color-cream-400: #b8ab90;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-cream-50 font-sans antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-gold-400);
+  color: var(--color-ink-950);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-700);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-600);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(120deg, #f0d79b 0%, #d9ab4f 45%, #a97a2b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  will-change: opacity, transform;
+}
+
+.line-mask {
+  display: block;
+  overflow: hidden;
+}
+.line-mask > span {
+  display: block;
+  transform: translateY(110%);
+  will-change: transform;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.glass {
+  background: rgba(11, 10, 8, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+input,
+select,
+textarea {
+  color-scheme: dark;
+}
