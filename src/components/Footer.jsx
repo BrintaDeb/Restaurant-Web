@@ -28,8 +28,8 @@ export default function Footer() {
               <span className="font-display text-xl">Saffron <span className="text-gold-400">&amp;</span> Sage</span>
             </a>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-cream-400">
-              A modern fine-dining sanctuary where seasonal produce, wood-fired craft and
-              warm hospitality come together.
+              A modern fine-dining sanctuary celebrating India's royal culinary heritage,
+              clay tandoor craft, and timeless hospitality.
             </p>
 
             <div className="mt-7">

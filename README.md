@@ -1,16 +1,25 @@
-# React + Vite
+# Saffron & Sage — Royal Indian Fine Dining
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, high-performance web application for **Saffron & Sage**, an authentic Royal Indian Fine Dining restaurant featuring:
+- **Interactive Indian Menu**: Authentic Awadhi Dum Biryanis, 24-Hour Dum Dal Makhani, Clay Tandoor Kebabs, Mithai, and artisanal coolers with Veg/Chef/Spicy badges.
+- **Indian Rupee (INR ₹) Pricing**: Real-time bill calculations with GST, optional service charges, free delivery thresholds, and promo codes (`TASTY10`, `ROYAL20`, `FEAST100`).
+- **Cart & Checkout**: Drawer cart with live quantity controls, delivery/takeaway toggles, and Indian payment methods (UPI / QR Code, Cards, Cash on Delivery).
+- **Table Reservation System**: Multi-step booking form with guest count, date picker, time slots, and immediate booking confirmation.
+- **Cinematic Experience**: GSAP smooth scroll animations, parallax hero imagery, dynamic marquee, and responsive layout.
 
-Currently, two official plugins are available:
+## Tech Stack
+- **Frontend**: React 19, Vite, Tailwind CSS v4, GSAP (GreenSock)
+- **Deployment**: Static build ready for Vercel / Netlify / GitHub Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
 
-## React Compiler
+```bash
+# Install dependencies
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Start development server
+npm run dev
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+# Build for production
+npm run build
+```

@@ -3,14 +3,14 @@ import { createContext, useContext, useMemo, useReducer } from "react"
 const CartContext = createContext(null)
 
 const TAX_RATE = 0.05
-const SERVICE_RATE = 0.1
-const DELIVERY_FEE = 3.5
-const FREE_DELIVERY_ABOVE = 60
+const SERVICE_RATE = 0.05
+const DELIVERY_FEE = 49
+const FREE_DELIVERY_ABOVE = 599
 
 const PROMOS = {
   TASTY10: { type: "percent", value: 10, label: "10% off food total" },
-  GOLD20: { type: "percent", value: 20, label: "20% off food total" },
-  FLAT5: { type: "flat", value: 5, label: "$5 off food total" },
+  ROYAL20: { type: "percent", value: 20, label: "20% off food total" },
+  FEAST100: { type: "flat", value: 100, label: "₹100 off food total" },
 }
 
 function reducer(state, action) {

@@ -1,7 +1,16 @@
 import { useLayoutEffect, useRef } from "react"
 import { gsap } from "../hooks/useGsap"
 
-const WORDS = ["Wood-Fired", "Farm to Table", "Handcrafted", "Seasonal", "Award-Winning", "Organic"]
+const WORDS = [
+  "Royal Mughlai",
+  "Dum Pukht",
+  "Clay Tandoor",
+  "Heirloom Spices",
+  "Kashmiri Saffron",
+  "Awadhi Dastarkhwan",
+  "Artisanal Breads",
+  "Pure Desi Ghee",
+]
 
 export default function Marquee() {
   const track = useRef(null)

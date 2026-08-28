@@ -1,1 +1,1 @@
-export const money = (n) => `$${n.toFixed(2)}`
+export const money = (n) => `₹${Math.round(n).toLocaleString("en-IN")}`

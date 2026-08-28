@@ -39,7 +39,7 @@ export default function Hero() {
 
       <div className="hero-content relative z-10 mx-auto max-w-5xl px-5 pt-28 pb-20 text-center">
         <p className="hero-badge mx-auto mb-6 w-fit rounded-full border border-gold-400/40 bg-ink-950/40 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold-300 backdrop-blur">
-          Est. 2012 · Fine Dining
+          Est. 2012 · Royal Indian Fine Dining
         </p>
 
         <h1 className="font-display text-5xl leading-[1.05] sm:text-7xl lg:text-8xl">
@@ -47,13 +47,13 @@ export default function Hero() {
             <span>Where Every Flavour</span>
           </span>
           <span className="hero-line line-mask">
-            <span className="text-gradient-gold italic">Tells a Story</span>
+            <span className="text-gradient-gold italic">Tells a Royal Story</span>
           </span>
         </h1>
 
         <p className="hero-fade mx-auto mt-7 max-w-2xl text-base leading-relaxed text-cream-300 sm:text-lg">
-          A modern sanctuary of taste in the heart of Midtown — seasonal ingredients,
-          wood-fired craft, and hospitality that lingers long after the last course.
+          A royal sanctuary of Indian culinary heritage — fragrant dum pukht, clay tandoor embers,
+          and timeless heirloom recipes perfected over generations.
         </p>
 
         <div className="hero-fade mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -73,8 +73,8 @@ export default function Hero() {
 
         <div className="hero-fade mx-auto mt-16 grid max-w-3xl grid-cols-3 divide-x divide-cream-50/10 rounded-2xl border border-cream-50/10 bg-ink-950/40 py-5 backdrop-blur">
           {[
-            ["14+", "Years of Craft"],
-            ["120+", "Signature Dishes"],
+            ["14+", "Years of Legacy"],
+            ["80+", "Royal Recipes"],
             ["4.9★", "Guest Rating"],
           ].map(([v, l]) => (
             <div key={l} className="px-2">

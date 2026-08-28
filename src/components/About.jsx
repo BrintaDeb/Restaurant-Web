@@ -64,14 +64,15 @@ export default function About() {
             <span className="text-gradient-gold italic">Served with Soul</span>
           </h2>
           <p className="reveal mt-6 leading-relaxed text-cream-300">
-            Born from a love of open-flame cooking and seasonal produce, Saffron &amp; Sage
-            brings together the warmth of a neighbourhood kitchen and the precision of a
-            fine-dining atelier. Every plate begins at dawn — with farmers, fishermen, and
-            foragers we've trusted for over a decade.
+            Born from an enduring reverence for India's royal kitchens, Saffron &amp; Sage
+            celebrates the timeless art of slow-dum gravies, hand-ground spices, and earthen
+            tandoor embers. From Lucknow's Awadhi courts to Kashmir's saffron valleys, every
+            recipe honours sacred culinary traditions with contemporary finesse.
           </p>
           <p className="reveal mt-4 leading-relaxed text-cream-300">
-            Our wood-fired hearth is the heart of the house, kissing everything from
-            hand-rolled pasta to dry-aged ribeye with gentle smoke and char.
+            Our flaming clay tandoor and copper handis sit at the heart of our house,
+            infusing every preparation with smouldering charcoal warmth, fragrant saffron,
+            and ghee-roasted spices sourced directly from heritage spice estates.
           </p>
 
           <div className="reveal-stagger mt-10 grid grid-cols-3 gap-4">

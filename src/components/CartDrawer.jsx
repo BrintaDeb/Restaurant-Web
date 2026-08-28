@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useCart } from "../context/CartContext"
 import { money } from "../utils/money"
 
-const PAYMENT_METHODS = ["Card on Delivery", "UPI / Wallet", "Cash"]
+const PAYMENT_METHODS = ["UPI / QR Code (GPay, PhonePe)", "Credit / Debit Card", "Cash on Delivery (COD)"]
 
 function BillRow({ label, value, accent, strike }) {
   return (
@@ -180,7 +180,7 @@ export default function CartDrawer({ open, onClose }) {
                         value={code}
                         onChange={(e) => setCode(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && handlePromo()}
-                        placeholder="Promo code (try TASTY10)"
+                        placeholder="Promo code (try TASTY10 or FEAST100)"
                         className={`${field} flex-1 py-2.5 uppercase placeholder:normal-case`}
                       />
                       <button
@@ -197,12 +197,12 @@ export default function CartDrawer({ open, onClose }) {
                 <div className="space-y-2 rounded-2xl bg-ink-950/60 p-4">
                   <BillRow label={`Subtotal (${bill.count} items)`} value={money(bill.subtotal)} />
                   {bill.discount > 0 && <BillRow label="Discount" value={`− ${money(bill.discount)}`} accent />}
-                  <BillRow label={`Tax (${(bill.taxRate * 100).toFixed(0)}%)`} value={money(bill.tax)} />
+                  <BillRow label={`GST (${(bill.taxRate * 100).toFixed(0)}%)`} value={money(bill.tax)} />
                   <BillRow label={`Service (${(bill.serviceRate * 100).toFixed(0)}%)`} value={money(bill.service)} />
                   {orderType === "delivery" && (
                     <BillRow
-                      label={bill.delivery === 0 ? "Delivery (free)" : `Delivery (free over ${money(bill.freeDeliveryAbove)})`}
-                      value={bill.delivery === 0 ? "$0.00" : money(bill.delivery)}
+                      label={bill.delivery === 0 ? "Delivery (Free)" : `Delivery (Free above ${money(bill.freeDeliveryAbove)})`}
+                      value={bill.delivery === 0 ? "Free" : money(bill.delivery)}
                       accent={bill.delivery === 0}
                     />
                   )}
