@@ -109,7 +109,7 @@ export default function CartDrawer({ open, onClose }) {
                   <p className="mt-1 text-sm text-cream-400">Add something delicious from the menu.</p>
                   <button
                     onClick={close}
-                    className="mt-6 rounded-full bg-gold-400 px-6 py-2.5 text-sm font-bold text-ink-950 transition hover:bg-gold-300"
+                    className="btn-indian btn-gold mt-6 px-6 py-2.5 text-sm"
                   >
                     Browse Menu
                   </button>
@@ -215,7 +215,7 @@ export default function CartDrawer({ open, onClose }) {
 
                 <button
                   onClick={() => setStep("checkout")}
-                  className="mt-4 w-full rounded-full bg-gold-400 py-3.5 text-sm font-bold uppercase tracking-widest text-ink-950 shadow-[0_10px_40px_rgba(217,171,79,0.3)] transition hover:bg-gold-300"
+                  className="btn-indian btn-gold mt-4 w-full py-3.5 text-sm"
                 >
                   Proceed to Checkout
                 </button>
@@ -290,7 +290,7 @@ export default function CartDrawer({ open, onClose }) {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-full bg-gold-400 py-3.5 text-sm font-bold uppercase tracking-widest text-ink-950 shadow-[0_10px_40px_rgba(217,171,79,0.3)] transition hover:bg-gold-300"
+                className="btn-indian btn-gold w-full py-3.5 text-sm"
               >
                 Place Order · {money(bill.total)}
               </button>
@@ -316,7 +316,7 @@ export default function CartDrawer({ open, onClose }) {
             </div>
             <button
               onClick={close}
-              className="mt-8 rounded-full bg-gold-400 px-8 py-3 text-sm font-bold uppercase tracking-widest text-ink-950 transition hover:bg-gold-300"
+              className="btn-indian btn-gold mt-8 px-8 py-3 text-sm"
             >
               Continue Browsing
             </button>

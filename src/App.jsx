@@ -2,10 +2,10 @@ import { useRef, useState } from "react"
 import { CartProvider } from "./context/CartContext"
 import { useReveal } from "./hooks/useGsap"
 import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
+import HeroCinematic from "./components/HeroCinematic"
 import Marquee from "./components/Marquee"
 import About from "./components/About"
-import Menu from "./components/Menu"
+import MenuCinematic from "./components/MenuCinematic"
 import Gallery from "./components/Gallery"
 import Testimonials from "./components/Testimonials"
 import Reservation from "./components/Reservation"
@@ -24,10 +24,10 @@ export default function App() {
         <div className="noise-overlay" aria-hidden="true" />
         <Navbar onOpenCart={() => setCartOpen(true)} />
         <main>
-          <Hero />
+          <HeroCinematic />
           <Marquee />
           <About />
-          <Menu />
+          <MenuCinematic />
           <Gallery />
           <Testimonials />
           <Reservation />

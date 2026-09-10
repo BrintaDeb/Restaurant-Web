@@ -3,6 +3,7 @@ import { gsap } from "../hooks/useGsap"
 import { CATEGORIES, MENU_ITEMS } from "../data/menu"
 import { useCart } from "../context/CartContext"
 import { money } from "../utils/money"
+import DecorativeDivider from "./DecorativeDivider"
 
 function TagBadge({ tag }) {
   const styles = {
@@ -21,6 +22,13 @@ function TagBadge({ tag }) {
 function MenuCard({ item }) {
   const { addItem, items, setQty } = useCart()
   const inCart = items.find((i) => i.id === item.id)
+  const [justAdded, setJustAdded] = useState(false)
+
+  const handleAdd = () => {
+    addItem(item)
+    setJustAdded(true)
+    setTimeout(() => setJustAdded(false), 400)
+  }
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-3xl border border-cream-50/10 bg-ink-900/70 transition duration-500 hover:-translate-y-1.5 hover:border-gold-400/40 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
@@ -53,10 +61,10 @@ function MenuCard({ item }) {
         <p className="mt-2 flex-1 text-sm leading-relaxed text-cream-400">{item.description}</p>
 
         {inCart ? (
-          <div className="mt-4 flex items-center justify-between rounded-full border border-gold-400/40 bg-ink-950/60 px-2 py-1.5">
+          <div className="mt-4 flex items-center justify-between rounded-full border border-gold-400/40 bg-ink-950/60 px-1 py-1">
             <button
               onClick={() => setQty(item.id, inCart.qty - 1)}
-              className="grid size-8 place-items-center rounded-full text-gold-300 transition hover:bg-gold-400 hover:text-ink-950"
+              className="btn-qty"
               aria-label={`Decrease ${item.name}`}
             >
               −
@@ -64,7 +72,7 @@ function MenuCard({ item }) {
             <span className="text-sm font-bold text-cream-50">{inCart.qty} in cart</span>
             <button
               onClick={() => setQty(item.id, inCart.qty + 1)}
-              className="grid size-8 place-items-center rounded-full text-gold-300 transition hover:bg-gold-400 hover:text-ink-950"
+              className="btn-qty"
               aria-label={`Increase ${item.name}`}
             >
               +
@@ -72,8 +80,10 @@ function MenuCard({ item }) {
           </div>
         ) : (
           <button
-            onClick={() => addItem(item)}
-            className="mt-4 flex items-center justify-center gap-2 rounded-full bg-cream-50/5 py-2.5 text-sm font-bold uppercase tracking-widest text-gold-300 ring-1 ring-gold-400/40 transition hover:bg-gold-400 hover:text-ink-950"
+            onClick={handleAdd}
+            className={`btn-indian btn-cart mt-4 flex items-center justify-center gap-2 rounded-full py-2.5 text-sm ${
+              justAdded ? "scale-95" : ""
+            }`}
           >
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M12 5v14M5 12h14" />
@@ -117,15 +127,17 @@ export default function Menu() {
           </p>
         </div>
 
-        <div className="reveal mt-12 flex flex-wrap justify-center gap-2.5">
+        <DecorativeDivider className="my-8" />
+
+        <div className="reveal mt-8 flex flex-wrap justify-center gap-2.5">
           {CATEGORIES.map((c) => (
             <button
               key={c.id}
               onClick={() => setActive(c.id)}
-              className={`rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide transition ${
+              className={`btn-indian rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide transition duration-300 ${
                 active === c.id
-                  ? "bg-gold-400 text-ink-950 shadow-[0_8px_30px_rgba(217,171,79,0.35)]"
-                  : "border border-cream-50/15 text-cream-300 hover:border-gold-400/50 hover:text-gold-300"
+                  ? "btn-gold shadow-[0_8px_30px_rgba(217,171,79,0.35)]"
+                  : "btn-ghost"
               }`}
             >
               {c.label}

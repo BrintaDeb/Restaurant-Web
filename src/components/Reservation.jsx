@@ -90,7 +90,7 @@ export default function Reservation() {
               </p>
               <button
                 onClick={() => setDone(false)}
-                className="mt-6 rounded-full border border-gold-400/50 px-6 py-2.5 text-sm font-bold text-gold-300 transition hover:bg-gold-400 hover:text-ink-950"
+                className="btn-indian btn-ghost mt-6 px-6 py-2.5 text-sm"
               >
                 Make Another Booking
               </button>
@@ -143,7 +143,7 @@ export default function Reservation() {
 
               <button
                 type="submit"
-                className="w-full rounded-full bg-gold-400 py-3.5 text-sm font-bold uppercase tracking-widest text-ink-950 shadow-[0_10px_40px_rgba(217,171,79,0.3)] transition hover:bg-gold-300"
+                className="btn-indian btn-gold w-full py-3.5 text-sm"
               >
                 Request Reservation
               </button>

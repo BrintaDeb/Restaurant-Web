@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef } from "react"
 import { gsap } from "../hooks/useGsap"
+import InteractiveButton from "./InteractiveButton"
 
 const IMG_MAIN =
   "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
@@ -91,15 +92,20 @@ export default function About() {
             ))}
           </div>
 
-          <a
-            href="#menu"
-            className="reveal mt-10 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gold-300 transition hover:gap-4 hover:text-gold-400"
-          >
-            Discover the Menu
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14m0 0-6-6m6 6-6 6" />
-            </svg>
-          </a>
+          <div className="reveal mt-10">
+            <InteractiveButton
+              variant="gold"
+              size="md"
+              as="a"
+              href="#menu"
+              className="inline-flex items-center gap-2"
+            >
+              Discover the Menu
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14m0 0-6-6m6 6-6 6" />
+              </svg>
+            </InteractiveButton>
+          </div>
         </div>
       </div>
     </section>
